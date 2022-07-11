@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
 const dataSchema = new mongoose.Schema({
     userId: { type: String, unique: true },
-    name: String,
-    age: Number,
+    Name: String,
+    Age: Number,
     ReportYear: Number,
     SerumIron: Number,
     SerumFerritin: Number,

@@ -9,8 +9,8 @@ const postData = async (req, res) => {
             },
             {
                 userId: crypto.SHA256(req.body.email).toString(),
-                name: req.body.name,
-                age: req.body.age,
+                Name: req.body.name,
+                Age: req.body.age,
                 ReportYear: req.body.ReportYear,
                 SerumIron: req.body.SerumIron,
                 SerumFerritin: req.body.SerumFerritin,
