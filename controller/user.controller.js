@@ -3,7 +3,7 @@ const crypto = require("crypto-js")
 const loginUser = async (req, res) => {
     try {
         const user = await User.findOne({ email: req.body.email })
-        user ? user.password === crypto.SHA256(req.body.password).toString() ? res.json({ message: "Login Success", status: 200 }) : res.json({ message: "Password Incorrect", status: 400 }) : res.json({ message: "User doesn't Exist", status: 400 })
+        user ? user.password === crypto.SHA256(req.body.password).toString() ? res.json({ message: "Login Success", email: res.body.email, status: 200 }) : res.json({ message: "Password Incorrect", status: 400 }) : res.json({ message: "User doesn't Exist", status: 400 })
     }
     catch (e) {
         console.log(e)
